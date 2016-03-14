@@ -22,7 +22,7 @@ def fetch_header(url_host, url_path):
 def get_link_destination(response_header):
     try:
         if response_header.status == 301:
-            print("\n***Shortened URL***\n\n" + response_header.getheader("Location"))
+            print("\n***Unshortened URL***\n\n" + response_header.getheader("Location"))
             return True
         else:
             print(ERR_NOT_SHORT_URL)
